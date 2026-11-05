@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+}
+main{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas: "h  h  h"
+                        " ar  ar as"
+                        "f  f  f";
+}
+
+header{
+    grid-area: h;
+    background-color: rgb(81, 190, 204);
+}
+nav{
+    grid-area: n;
+    background-color: rgb(87, 164, 231);
+}
+article{
+    grid-area: ar;
+    background-color: rgb(209, 207, 64);
+}
+section{
+    grid-area: s;
+    background-color: rgb(15, 70, 51);
+}
+aside{
+    grid-area: as;
+    background-color: rgb(240, 11, 202);
+}
+footer{
+    grid-area: f;
+    background-color: rgb(0, 105, 109);
+}
+
+@media screen and (max-width:600px) {
+    main{
+
+        grid-template-columns:1fr 1fr;
+        grid-template-areas: "h"
+                            "n "
+                            "ar"
+                            "as"
+                            "f";
+    }
+    
+}
